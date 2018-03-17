@@ -15,9 +15,11 @@ int main()
 	Class First, F2;
 	First.in();
 	First.out();
-	First.save("text.txt");
-	F2.load("text.txt");
+	First.save("text.txt"); // загружаем в файл
+	F2.load("text.txt"); // загружаем из файла
+	F2.change(F2.Name); // меняем имя в F2
 	F2.out();
+
 	system("pause");
     return 0;
 }

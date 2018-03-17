@@ -94,3 +94,8 @@ void Class::load(char * t)
 
 	f_out.close();
 }
+
+void Class::change(string & str)
+{
+	cin >> str;
+}
