@@ -14,7 +14,7 @@ public:
 	void out();
 	const char * preobr(string str);
 	void save(char *t);
-	//void load(char * t);
+	void load(char * t);
 	~Class();
 };
 

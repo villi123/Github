@@ -16,8 +16,8 @@ int main()
 	First.in();
 	First.out();
 	First.save("text.txt");
-	//F2.load("text.txt");
-	//F2.out();
+	F2.load("text.txt");
+	F2.out();
 	system("pause");
     return 0;
 }

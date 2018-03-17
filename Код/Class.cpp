@@ -59,7 +59,7 @@ void Class::save(char * t )// сохранить в файл с именем t
 	f_out.write("\n", 2);
 	f_out.close();
 }
-/*
+
 void Class::load(char * t)
 {
 	std::fstream f_out;
@@ -68,34 +68,29 @@ void Class::load(char * t)
 
 	char buf[1000];
 	f_out.read(buf, 999);
-	
-	string bufstr;
+	//string bufstr;
+	char str1[1000] = {};
+	char str2[1000] = {};
+	char str3[1000] = {};
 	int length = 0;
-	for (int i = 0; buf[i] != -52; i++)
-	{
-		length = i + 1;
+	int i = 1;
+	for (int j = 0; i < 999 && buf[i] != NULL && buf[i] != ' ';j++, i++)
+	{	
+		str1[j] = buf[i];
 	}
+	FamilyName = str1;
+	i++;
+	for (int j = 0; i < 999 && buf[i] != NULL && buf[i] != ' '; j++, i++)
+	{
+		str2[j] = buf[i];
+	}
+	Name = str2;
+	i++;
+	for (int j = 0; i < 999 && buf[i] != NULL && buf[i] != ' '; j++, i++)
+	{
+		str3[j] = buf[i];
+	}
+	 Pasport = str3;
 
-	new char * stroka = new char[length];
-	for (int i = 0; i < length; i++)
-	{
-		stroka[i] = buf[i];
-	}
-	int j = 0;
-	for (int i = 0;  bufstr[j] != ' ' && j < bufstr.length() ; i++, j++)
-	{
-		FamilyName[i] = bufstr[j];
-	}
-	j++;
-	for (int i = 0; bufstr[j] != ' '  && j < bufstr.length(); i++, j++)
-	{
-		Name[i] = bufstr[j];
-	}
-	j++;
-	for (int i = 0; bufstr[j] != ' ' && j < bufstr.length() && bufstr[j] != '\n'; i++, j++)
-	{
-		Pasport[i] = bufstr[j];
-	}
 	f_out.close();
 }
-*/
